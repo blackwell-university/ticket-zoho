@@ -204,7 +204,7 @@ html, body {
             if (mapDependancyLabels) {
                 for (var i = 0; i < mapDependancyLabels.length; i++) {
                     var label = mapDependancyLabels[i];
-                    var obj = document.forms['zsWebToCase_1095985000000365001'][label];
+                    var obj = document.forms['zsWebToCase_1095985000000458013'][label];
                     if (obj) {
                         setDependent(obj, true);
                     }
@@ -218,7 +218,7 @@ html, body {
                 zsRegenerateCaptcha();
             }
             setAllDependancyFieldsMapping();
-            document.getElementById('zsSubmitButton_1095985000000365001').removeAttribute('disabled');
+            document.getElementById('zsSubmitButton_1095985000000458013').removeAttribute('disabled');
             zsAttachedAttachmentsCount = 0;
             zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];
             jQuery('#zsFileBrowseAttachments').html('');
@@ -227,14 +227,14 @@ html, body {
         // Form Reset Function
         function zsResetWebForm(webFormId) {
             document.forms['zsWebToCase_' + webFormId].reset();
-            document.getElementById('zsSubmitButton_1095985000000365001').removeAttribute('disabled');
+            document.getElementById('zsSubmitButton_1095985000000458013').removeAttribute('disabled');
             setAllDependancyFieldsMapping();
             zsAttachedAttachmentsCount = 0;
             zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5];
             jQuery('#zsFileBrowseAttachments').html('');
             zsCloudPickerJSON = {};
-            if (document.forms['zsWebToCase_1095985000000365001']['zsCloudPickerAttachments'] != undefined) {
-                document.forms['zsWebToCase_1095985000000365001']['zsCloudPickerAttachments'].value = JSON.stringify({});
+            if (document.forms['zsWebToCase_1095985000000458013']['zsCloudPickerAttachments'] != undefined) {
+                document.forms['zsWebToCase_1095985000000458013']['zsCloudPickerAttachments'].value = JSON.stringify({});
             }
             zsRearrangeFileBrowseAttachments();
             zsChangeMousePointer();
@@ -313,7 +313,7 @@ html, body {
             var isError = false;
             
             for(var i = 0; i < mandatoryFields.length; i++) {
-                var fieldObj = document.forms['zsWebToCase_1095985000000365001'][mandatoryFields[i]];
+                var fieldObj = document.forms['zsWebToCase_1095985000000458013'][mandatoryFields[i]];
                 if(fieldObj) {
                     if(fieldObj.value.trim() === '') {
                         alert(fieldLabels[mandatoryFields[i]] + ' no puede estar vacío');
@@ -325,7 +325,7 @@ html, body {
             }
             
             // Email validation
-            var emailObj = document.forms['zsWebToCase_1095985000000365001']['Email'];
+            var emailObj = document.forms['zsWebToCase_1095985000000458013']['Email'];
             if(emailObj && !isError) {
                 if(emailObj.value.trim() !== '' && !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(emailObj.value))) {
                     alert('Por favor, introduce una dirección de correo electrónico válida');
@@ -352,13 +352,13 @@ html, body {
             </div>
              <!-- Columna del formulario -->
              <div class="col-md-8 form-container">
-                    <form name='zsWebToCase_1095985000000365001' id='zsWebToCase_1095985000000365001' 
+                    <form name='zsWebToCase_1095985000000458013' id='zsWebToCase_1095985000000458013' 
                           action='https://desk.zoho.com/support/WebToCase' method='POST' 
                           onSubmit='return zsValidateMandatoryFields()' enctype='multipart/form-data'>
                         
                         <!-- Hidden Fields -->
                         <input type='hidden' name='xnQsjsdp' value='edbsn26679f3fa8c1d6c53c56627a48990e9d'/>
-                        <input type='hidden' name='xmIwtLD' value='edbsn63a2a059d8dd652255d3089a8b2b5ee284cb7708eb4910b00530a714bc12bc0b'/>
+                        <input type='hidden' name='xmIwtLD' value='edbsne2ce20582c8f950db92e389e37cf5fa3e04c3a66910d31a0e8cf26ceabaa1c37'/>
                         <input type='hidden' name='xJdfEaS' value=''/>
                         <input type='hidden' name='actionType' value='Q2FzZXM='/>
                         <input type="hidden" id="property(module)" value="Cases"/>
@@ -497,8 +497,8 @@ html, body {
                         <!-- Form Buttons -->
                         <div class="row mt-4">
                             <div class="col-12 text-center">
-                                <button type="submit" id="zsSubmitButton_1095985000000365001" class="btn btn-primary me-2">Enviar</button>
-                                <button type="button" class="btn btn-secondary" onclick="zsResetWebForm('1095985000000365001')">Restablecer</button>
+                                <button type="submit" id="zsSubmitButton_1095985000000458013" class="btn btn-primary me-2">Enviar</button>
+                                <button type="button" class="btn btn-secondary" onclick="zsResetWebForm('1095985000000458013')">Restablecer</button>
                             </div>
                         </div>
                         
